@@ -10,7 +10,7 @@ int _putchar(char c);
 int pc(va_list args, int y);
 int ps(va_list args, int y);
 int pi(va_list args, int y);
-int op(const char *format, va_list args, int y);
+int opr(const char *format, va_list args, int y);
 int pb(unsigned int n, int y);
 int _printf(const char *format, ...);
 int hexa(unsigned int n, int y, int uppercase);
