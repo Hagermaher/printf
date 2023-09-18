@@ -9,7 +9,7 @@
 
 int po(unsigned int n, int y)
 {
-	int c[100],
+	int c[100];
 	int w;
 	int b;
 
