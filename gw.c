@@ -3,39 +3,36 @@
 
 
 /**
- * gp - Carinting
+ * gw - Carinting
  * @format: Formatted string in which to print the arguments
  * @w: Linted
  * @k: listents.
  * Return: Precision.
  */
 
-int gp(const char *format, int *w, va_list k)
+int gw(const char *format, int *w, va_list k)
 {
 	int cu;
-	int d;
+	int a;
 
-	cu = *w + 1;
-	d = -1;
-	if (format[cu] != '.')
-		return (d);
+	a = 0;
 	d = 0;
-	for (cu = cu + 1; format[cu] != '\0'; cu++)
+	for (cu = *w + 1; format[cu] != '\0'; cu++)
 	{
 		if (id(format[cu]))
 		{
-			d = d * 10;
-			d = d + format[cu] - '0';
+			a = a * 10;
+			a = a + format[cu] - '0';
 		}
 		else if (format[cu] == '*')
 		{
 			cu++;
-			d = va_arg(k, int);
+			a = va_arg(k, int);
 			break;
 		}
 		else
 			break;
 	}
 	*w = cu - 1;
-	return (d);
+	return (a);
 }
