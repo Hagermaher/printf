@@ -16,7 +16,6 @@ int gw(const char *format, int *w, va_list k)
 	int a;
 
 	a = 0;
-	d = 0;
 	for (cu = *w + 1; format[cu] != '\0'; cu++)
 	{
 		if (id(format[cu]))
