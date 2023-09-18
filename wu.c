@@ -23,14 +23,26 @@ int wu(int in, int o, char b[], int e, int a, int d, int m)
 	w = 0;
 	UNUSED(m);
 	UNUSED(in);
-
+	if (d == 0 && o == BUFF_SIZE - 2 && b[o] == 48)
+		return (0);
+	if (d > 0 && d < h)
+		z = ' ';
+	while (d > h)
+	{
+		b[--o] = 48;
+		h++;
+	}
 	if ((e & ez) && !(e & em))
 		z = 48;
-	if (in)
-		x = 45;
-	else if (e & ep)
-		x = 43;
-	else if (e & es)
-		x = 32;
-	return (wnu(o, b, e, a, d, h, z, x));
+	if (a > h)
+	{
+		for (w = 0; w < a - h; w++)
+			b[w] = z;
+		b[w] = '\0';
+		if (e & em)
+			return (write(1, &b[o], h) + write(1, &b[0], w));
+		else
+			return (write(1, &b[0], w) + write(1, &b[o], h));
+	}
+	return (write(1, &b[o], h));
 }

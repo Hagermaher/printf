@@ -22,7 +22,7 @@ int pro(va_list t, char b[], int e, int a, int d, int m)
 	char c[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	o = 0;
-	s = a_arg(t, char *);
+	s = va_arg(t, char *);
 	UNUSED(b);
 	UNUSED(e);
 	UNUSED(a);
