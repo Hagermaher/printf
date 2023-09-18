@@ -12,7 +12,7 @@
 int pp(va_list args, int y)
 {
 	void *p = va_arg(args, void*);
-	unsigned long num = (unsigned long) p;
+	unsigned long n = (unsigned long) p;
 	int r;
 	int w;
 	unsigned long m;
