@@ -16,8 +16,8 @@ int pp(va_list args, int y)
 	int r;
 	int w;
 	unsigned long m;
-	char h[mhd] = "0123456789abcdef";
-	char hd[mhd];
+	char hd[mhd] = "0123456789abcdef";
+	char h[mhd];
 
 	m = n;
 	r = 0;
