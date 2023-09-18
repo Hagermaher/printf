@@ -39,9 +39,10 @@ int pp(va_list args, int y)
 	{
 		for (w = r - 1; w >= 0; w--)
 		{
-			int r = n % 16;
+			int f;
 
-			h[w] = hd[r];
+			f = n % 16;
+			h[w] = hd[f];
 			n = n / 16;
 		}
 		for (w = 0; w < r; w++)
