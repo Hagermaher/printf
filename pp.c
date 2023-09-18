@@ -33,7 +33,7 @@ int pp(va_list args, int y)
 
 	if (n == 0)
 	{
-		y += _putchar('0');
+		y = y + _putchar('0');
 	}
 	else
 	{
@@ -47,7 +47,7 @@ int pp(va_list args, int y)
 		}
 		for (w = 0; w < r; w++)
 		{
-			y += _putchar(h[w]);
+			y = y + _putchar(h[w]);
 		}
 	}
 	return (y);

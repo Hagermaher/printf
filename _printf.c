@@ -5,30 +5,43 @@
  * @format: arguements
  * Return: printed
  */
-
 int _printf(const char *format, ...)
 {
-	int y;
-	va_list args;
+
+	int w, y, yt, e, a, d, m, bm;
+	char b[BUFF_SIZE];
+	va_list k;
 
 	y = 0;
-
-	va_start(args, format);
-	while (*format != '\0')
+	yt = 0;
+	bm = 0;
+	if (format == NULL)
+		return (-1);
+	va_start(k, format);
+	for (w = 0; format && format[w] != '\0'; w++)
 	{
-		if (*format == '%')
+		if (format[w] != '%')
 		{
-			format++;
-			y = opr(format, args, y);
-			format++;
+			b[bm++] = format[w];
+			if (bm == BUFF_SIZE)
+				pf(b, &bm);
+			yt = yt + 1;
 		}
 		else
 		{
-			_putchar(*format);
-			y = y + 1;
-			format++;
+			pf(b, &bm);
+			e = gf(format, &w);
+			a = gw(format, &w, k);
+			d = gp(format, &w, k);
+			m = gs(format, &w);
+			++w;
+			y = hp(format, &w, k, b, e, a, d, m);
+			if (y == -1)
+				return (-1);
+			yt = yt + y;
 		}
 	}
-	va_end(args);
-	return (y);
+	pf(b, &bm);
+	va_end(k);
+	return (yt);
 }
