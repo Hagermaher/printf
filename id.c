@@ -5,7 +5,7 @@
  * Return: ds
  */
 
-int ip(char z)
+int id(char z)
 {
 	if (z >= 48 && z < 57)
 		return (1);
