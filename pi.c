@@ -1,48 +1,37 @@
 #include "main.h"
 /**
  * pi - prints integer number
- * @args: number of arguments
- * @y: the printed character
- * Return: printed character
+ * @t: ents
+ * @b: Buffprint
+ * @e: Calculates act
+ * @a: ge.
+ * @d: Precisoon
+ * @m: Size sr
+ * Return: Numprinted
  */
-int pi(va_list args, int y)
+int pi(va_list t, char b[], int e, int a, int d, int m)
 {
-	int n = va_arg(args, int);
-	int ds;
+	int w;
+	int in;
+	unsigned long int ra;
+	long int r = va_arg(t, long int);
 
-	ds = 0;
-	int t;
-
-	t = n;
-	int d;
-
-	if (n < 0)
+	w = BUFF_SIZE - 2;
+	r = csn(r, m);
+	if (r == 0)
+		b[w--] = '0';
+	b[BUFF_SIZE - 1] = '\0';
+	ra = (unsigned long int)r;
+	if (r < 0)
 	{
-		y = y + _putchar('-');
-		n = -n;
-
-		t = n;
+		ra = (unsigned long int)((-1) * r);
+		in = 1;
 	}
-	do {
-		ds = ds + 1;
-		t = t / 10;
-	} while (t != 0);
-
-	while (ds > 0)
+	while (ra > 0)
 	{
-		int power;
-
-		power = 1;
-		int w;
-
-		for (w = 1; w < ds; w++)
-		{
-			power = power * 10;
-		}
-		d = n / power;
-		y = y + _putchar(d + '0');
-		n = n - d * power;
-		ds--;
+		b[w--] = (ra % 10) + '0';
+		ra = ra / 10;
 	}
-	return (y);
+	w++;
+	return (wn(in, w, b, e, a, d, m));
 }
