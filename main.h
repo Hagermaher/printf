@@ -53,8 +53,8 @@ int po(unsigned int n, int y);
 int pu(unsigned int n, int y);
 int pr(va_list args, int y);
 int pp(va_list args, int y);
-int ge(const char *format, int w);
-int gw(const char *format, int w, va_list k);
-int gp(const char *format, int w, va_list k);
-int gs(const char *format, int w);
+int ge(const char *format, int *w);
+int gw(const char *format, int *w, va_list k);
+int gp(const char *format, int *w, va_list k);
+int gs(const char *format, int *w);
 #endif
