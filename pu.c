@@ -2,45 +2,30 @@
 
 /**
  * pu - print
- * @n: arguements
- * @y: characters
+ * @t: arguements
+ * @b: characters
+ * @e: f
+ * @a: d
+ * @d: d
+ * @m: s
  * Return: charcaters
  */
 
-int pu(unsigned int n, int y)
+int pu(va_list t, char b[], int e, int a, int d, int m)
 {
-	int r;
-	unsigned int m;
+	int w;
+	unsigned long int n = va_arg(t, unsigned long int);
 
-	m = n;
-	r = 0;
-
-	do {
-		r = r + 1;
-		m /= 10;
-	} while (m != 0);
-
+	n = csu(n, m);
+	w = BUFF_SIZE - 2;
 	if (n == 0)
+		b[w--] = '0';
+	b[BUFF_SIZE - 1] = '\0';
+	while (n > 0)
 	{
-		_putchar('0');
-		y = y + 1;
+		b[w--] = (n % 10) + '0';
+		n = n / 10;
 	}
-	else
-	{
-		char us[11];
-		int w = 0;
-
-		while (n != 0)
-		{
-			us[w] = (n % 10) + '0';
-			n = n / 10;
-			w++;
-		}
-		for (w = r - 1; w >= 0; w--)
-		{
-			_putchar(us[w]);
-			y = y + 1;
-		}
-	}
-	return (y);
+	w++;
+	return (wu(0, w, b, e, a, d, m));
 }
