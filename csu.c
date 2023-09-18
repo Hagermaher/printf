@@ -8,9 +8,9 @@
 
 long int csu(unsigned long int n, int m)
 {
-	if (m == S_LONG)
+	if (m == 2)
 		return (n);
-	else if (m == S_SHORT)
+	else if (m == 1)
 		return ((unsigned short)n);
 	return ((unsigned int)n);
 }
