@@ -8,14 +8,14 @@
 
 #define UNUSED(x) (void)(x)
 
-#define EM 1
-#define EP 2
-#define EZ 4
-#define FH 8
-#define FS 16
+#define em 1
+#define ep 2
+#define ez 4
+#define eh 8
+#define es 16
 
-#define ML 2
-#define MH 1
+#define ml 2
+#define ms 1
 
 /**
  * struct f - struct
@@ -53,4 +53,8 @@ int po(unsigned int n, int y);
 int pu(unsigned int n, int y);
 int pr(va_list args, int y);
 int pp(va_list args, int y);
+int ge(const char *format, int w);
+int gw(const char *format, int w, va_list k);
+int gp(const char *format, int w, va_list k);
+int gs(const char *format, int w);
 #endif
