@@ -28,7 +28,7 @@ int ppo(va_list t, char b[], int e, int a, int m, int pd)
 
 	b[1024 - 1] = '\0';
 
-	UNUSED(pa);
+	UNUSED(pd);
 
 	n_ad = (unsigned long)ad;
 
