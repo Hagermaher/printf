@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * wnu - write num
  * @o: index
@@ -30,13 +31,13 @@ int wnu(int o, char b[], int e, int a, int pe,
 		for (w = 1; w < a - le + 1; w++)
 			b[w] = pa;
 		b[w] = '\0';
-		if (e & em && pa == ' ')
+		if (e & 1 && pa == ' ')
 		{
 			if (ech)
 				b[--o] = ech;
 			return (write(1, &b[o], le) + write(1, &b[o], w - 1));
 		}
-		else if (!(e & em) && pa == ' ')
+		else if (!(e & 1) && pa == ' ')
 		{
 			if (ech)
 				b[--o] = ech;
