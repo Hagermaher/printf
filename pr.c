@@ -33,7 +33,6 @@ int pr(va_list t, char b[], int a, int pd, int m, int e)
 		char zi = s[i];
 
 		write(1, &zi, 1);
-
 		co ++;
 	}
 	return (co);	

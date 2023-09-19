@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * wp - write memory address
+ * wpn - write memory address
  * @b: array of char
  * @o: index
  * @le: length
@@ -11,8 +11,8 @@
  * @pst: index
  * Return: num of written
  */
-int wp(char b[], int o, int le, int a,
-		int e, int a, char pa, char ec, int pst)
+int wpn(char b[], int o, int le,int a,
+		int e, char pa, char ec, int pst);
 {
 	int w;
 
@@ -57,4 +57,3 @@ int wp(char b[], int o, int le, int a,
 		b[--o] = ec;
 	return (write(1, &b[o], bbm - o - 1));
 }
-

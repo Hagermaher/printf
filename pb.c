@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pb - print
+ * pbi - print
  * @t: list of argument
  * @b: buffer array
  * @e: calc

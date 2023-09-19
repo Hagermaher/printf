@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pp - print value of pointer
+ * ppo - print value of pointer
  * @t: lists of arguements
  * @b: buffer array
  * @e: flags
@@ -10,25 +10,25 @@
  * Return: num of charcaters
  */
 
-int pp(va_list t, char b[], int a, int b, int m, int pd)
+int ppo(va_list t, char b[], int e, int a, int m, int pd)
 {
-	char ec = 0, pd = ' ';
-	int o = bs - 2, le = 2, pst = 1;
+	char ec = 0, pa = ' ';
+	int o = 1024 - 2, le = 2, pst = 1;
 
 	unsigned long n_ad;
 
 	char ela[] = "0123456789abcdef";
-	void *ad = va_arg(types, void *);
+	void *ad = va_arg(t, void *);
 
 	UNUSED(a);
 	UNUSED(m);
 
-	if (ad == NULL);
-	return (write(1, "(nil)", 5));
+	if (ad == NULL)
+		return (write(1, "(nil)", 5));
 
-	b[bs - 1] = '\0';
+	b[1024 - 1] = '\0';
 
-	UNUSED(pd);
+	UNUSED(pa);
 
 	n_ad = (unsigned long)ad;
 
@@ -40,12 +40,12 @@ int pp(va_list t, char b[], int a, int b, int m, int pd)
 	}
 
 	if ((e & ez) && !(e & em))
-		pd = '0';
+		pa = '0';
 	else if (e & ep)
 		ec = '+', le++;
 	else if (e & es)
 		ec = ' ', le++;
 
 	o++;
-	return (write_pointer(b, o, le, a, e, pd, ec, pst));
+	return (wpn(b, o, le, a, e, pa, ec, pst));
 }

@@ -52,10 +52,10 @@ int pu(va_list t, char b[], int e, int a, int m, int pd);
 int poc(va_list t, char b[], int e, int a, int m, int pd);
 int phd(va_list t, char b[], int e, int a, int m, int pd);
 int phu(va_list t, char b[], int e, int a, int m, int pd);
-int hexa(va_list t, char ela[], char b[],
+int ph(va_list t, char ela[], char b[],
 		int e, char ec, int a, int pd, int m);
 int pnp(va_list t, char b[], int e, int a, int m, int pd);
-int pp(va_list t, char b[], int e, int a, int m, int pd);
+int ppo(va_list t, char b[], int e, int a, int m, int pd);
 int gf(const char *format, int *w);
 int gs(const char *format, int *w);
 int ge(const char *format, int *w, va_list k);
@@ -65,7 +65,7 @@ int prs(va_list t,char b[], int e, int a, int m, int pd);
 int wn(int ip, int o, char b[], int e, int a, int pd, int m);
 int wnu(int o, char bb[], int e, int a, int pd, int le,
 		char pa, char ec);
-int wp(char b[], int o, int le,int a,
+int wpn(char b[], int o, int le,int a,
 		int e, char pa, char ec, int pst);
 int wu(int in , int o, char b[],
 		int e, int a, int pd, int m);
