@@ -1,17 +1,18 @@
 #include "main.h"
 /**
  * po - print octal
+ * @pd: precision
  * @t: list of argument
  * @b : buffer array
  * @e: calc flags
  * @a: width
  * @m: sizw
- * Return : num of char
+ * Return: num of char
  */
 
-int po(va_list t, char b[], int e, int a, int m, int pd)
+int poc(va_list t, char b[], int e, int a, int m, int pd)
 {
-	int w = bs - 2;
+	int w = 1024 - 2;
 	unsigned long int n = va_arg(t, unsigned long int);
 	unsigned long int in = n;
 
@@ -21,8 +22,7 @@ int po(va_list t, char b[], int e, int a, int m, int pd)
 
 	if (n == 0)
 		b[w--] = '0';
-	
-	b[bs - 1] = '\0';
+	b[1024 - 1] = '\0';
 	while (n > 0)
 	{
 		b[w--] = (n % 8) + '0';
@@ -31,5 +31,5 @@ int po(va_list t, char b[], int e, int a, int m, int pd)
 	if (e & eh && in != 0)
 		b[w--] = '0';
 	w++;
-	return (write_unsgnd(0, w, b, e, a, pd, m));
-}	
+	return (wu(0, w, b, e, a, pd, m));
+}
