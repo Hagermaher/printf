@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pr - prints a binary number
+ * prs - prints a binary number
  * @t: lists of arguments
  * @m: size
  * @e: flags
