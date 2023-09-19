@@ -31,5 +31,5 @@ int po(va_list t, char b[], int e, int a, int m, int pd)
 	if (e & eh && in != 0)
 		b[w--] = '0';
 	w++;
-	return (write_unsignd(0, w, b, e, a, pd, m));
+	return (write_unsgnd(0, w, b, e, a, pd, m));
 }	
