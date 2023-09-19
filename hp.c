@@ -17,13 +17,13 @@ int hp(const char *f, int *o, va_list k, char b[],
 	int w, ul = 0, pch = -1;
 	xf f_t[] = {
 		{'c', pc}, {'s', ps}, {'%', pps},
-		{'i', pi}, {'d', pi}, {'b', pb},
-		{'u', pu}, {'o', po}, {'x', phd},
-		{'X', phu}, {'p', pp}, {'S', pnp},
-		{'r', pr}, {'R', prs}, {'\0', NULL}
+		{'i', pi}, {'d', pi}, {'b', pbi},
+		{'u', pu}, {'o', poc}, {'x', phd},
+		{'X', phu}, {'p', ppo}, {'S', pnp},
+		{'r', prse}, {'R', prs}, {'\0', NULL}
 	};
 	for (w = 0; f_t[w].f != '\0'; w++)
-		if (fx[*o] == f_t[w].f)
+		if (f[*o] == f_t[w].f)
 			return (f_t[w].fx(k, b, e, a, pd, m));
 	if (f_t[w].f == '\0')
 	{
