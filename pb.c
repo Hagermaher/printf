@@ -9,7 +9,7 @@
  * @m: size
  * Return: num of char
  */
-int pb(va_list t, char b[], int e, int a, int pd, int m)
+int pbi(va_list t, char b[], int e, int a, int m, int pd)
 {
 	unsigned int q, v, w, su;
 
