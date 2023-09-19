@@ -29,7 +29,7 @@ int pnp(va_list t, char b[], int e, int a, int d, int m)
 		if (ip(s[w]))
 			b[w + o] = s[w];
 		else
-			o = o + ahc(s[w], b, w + o);
+			o = o + aph(s[w], b, w + o);
 		w++;
 	}
 	b[w + o] = '\0';
