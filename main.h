@@ -47,7 +47,7 @@ int pps(va_list t, char b[], int e, int a, int pd, int m);
 int hwc(char z, char b[], int e, int a, int pd, int m);
 int _printf(const char *format, ...);
 int pi(va_list t, char b[], int e, int a, int m, int pd);
-int pb(va_list t,char b[], int e, int a, int m, int pd);
+int pb(va_list t, char b[], int e, int a, int m, int pd);
 int pu(va_list t,char b[], int e, int a, int m, int pd);
 int po(va_list t,char b[], int e, int a, int m, int pd);
 int phd(va_list t,char b[], int e, int a, int m, int pd);

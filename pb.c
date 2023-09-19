@@ -6,29 +6,9 @@
  * @e: calc
  * @a: width
  * @pd: precision specification
- * @ m: size
+ * @m: size
  * Return: num of char
  */
-int pb/**
-
- * print_binary - Prints an unsigned number
-
- * @types: Lista of arguments
-
- * @buffer: Buffer array to handle print
-
- * @flags:  Calculates active flags
-
- * @width: get width.
-
- * @precision: Precision specification
-
- * @size: Size specifier
-
- * Return: Numbers of char printed.
-
- */
-
 int pb(va_list t, char b[], int e, int a, int pd, int m)
 {
 	unsigned int q, v, w, su;
@@ -45,10 +25,10 @@ int pb(va_list t, char b[], int e, int a, int pd, int m)
 
 	q = va_arg(t, unsigned int);
 	m = 2147483648;
-	ar[0] = q \ v;
-	for (w = 1; w <32; w++)
+	ar[0] = q / v;
+	for (w = 1; w < 32; w++)
 	{
-		v = v/2;
+		v = v / 2;
 		ar[w] = (q / v) % 2;
 	}
 	for (w = 0, su = 0, co = 0; w < 32; w++)
@@ -64,4 +44,3 @@ int pb(va_list t, char b[], int e, int a, int pd, int m)
 	}
 	return (co);
 }
-
