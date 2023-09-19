@@ -21,10 +21,11 @@ int ph(va_list t, char ela[], char b[], int e, char ech, int a, int d, int m)
 
 	n = va_arg(t, unsigned long int);
 	in = n;
+	w = 1024 - 2;
 	UNUSED(a);
 	n = csu(n, m);
 	if (n == 0)
-		b[w--] = '0';
+		b[w--] = 48;
 	b[1024 - 1] = '\0';
 	while (n > 0)
 	{
@@ -34,8 +35,8 @@ int ph(va_list t, char ela[], char b[], int e, char ech, int a, int d, int m)
 	if (e & eh && in != 0)
 	{
 		b[w--] = ech;
-		b[w--] = '0';
+		b[w--] = 48;
 	}
 	w++;
-	return (wu(0, b, e, a, d, m));
+	return (wu(0, w, b, e, a, d, m));
 }
