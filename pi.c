@@ -16,6 +16,7 @@ int pi(va_list t, char b[], int e, int a, int d, int m)
 	unsigned long int ra;
 	long int r = va_arg(t, long int);
 
+	in = 0;
 	w = 1024 - 2;
 	r = csn(r, m);
 	if (r == 0)
