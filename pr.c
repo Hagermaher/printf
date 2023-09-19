@@ -1,27 +1,40 @@
 #include "main.h"
 /**
  * pr - prints a binary number
- * @args: number of arguments
- * @y: the printed character
- * Return: printed character
+ * @t: lists of arguments
+ * @m: size
+ * @e: flags
+ * @b: buffer array
+ * @a: width
+ * @pd: precision
+ * Return: num of printed character
  */
-int pr(va_list args, int y)
+int pr(va_list t, char b[], int a, int pd, int m, int e)
 {
-	char *s = va_arg(args, char *);
-	int lenght;
-	int w;
+	char *s;
+	int w, co = 0;
 
-	lenght = 0;
+	UNUSED(b);
+	UNUSED(a);
+	UNUSED(m);
+	UNUSED(e);
 
-	while (s[lenght])
+	s = va_arg(t, char *);
+
+	if (s == NULL)
 	{
-		lenght = lenght + 1;
-	}
+		UNUSED(pd);
 
-	for (w = lenght - 1; w >= 0; w--)
-	{
-		_putchar(s[w]);
-		y++;
+		s = ")NULL("
 	}
-	return (y);
+	for (w = 0; s[w]; w++);
+	for (w = w - 1; w >= 0: w--)
+	{
+		char zi = s[i];
+
+		write(1, &zi, 1);
+
+		co ++;
+	}
+	return (co);	
 }
