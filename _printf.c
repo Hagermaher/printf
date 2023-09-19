@@ -1,7 +1,5 @@
 #include "main.h"
 
-void fpf(char b[], int *bm);
-
 /**
  * _printf - print number
  * @format: arguements
@@ -48,15 +46,3 @@ int _printf(const char *format, ...)
 	return (yt);
 }
 
-/**
- * fpf - Prints
- * @b: Array
- * @bm: Index
- */
-
-void fpf(char b[], int *bm)
-{
-	if (*bm > 0)
-		write(1, &b[0], *bm);
-	*bm = 0;
-}
