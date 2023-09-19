@@ -11,7 +11,7 @@
  * @pst: index
  * Return: num of written
  */
-int wpn(char b[], int o, int le,int a,
+int wpn(char b[], int o, int le, int a,
 		int e, char pa, char ec, int pst)
 {
 	int w;
@@ -25,7 +25,6 @@ int wpn(char b[], int o, int le,int a,
 		{
 			b[--o];
 			b[--o];
-
 			if (ec)
 				b[--o] = ec;
 			return (write(1, &b[o], le) + write(1, &b[3], w - 3));
@@ -34,7 +33,6 @@ int wpn(char b[], int o, int le,int a,
 		{
 			b[--o] = 'x';
 			b[--o] = '0';
-
 			if (ec)
 				b[--o] = ec;
 			return (write(1, &b[3], w - 3) + write(1, &b[o], le));
@@ -47,12 +45,10 @@ int wpn(char b[], int o, int le,int a,
 			b[2] = 'x';
 			return (write(1, &b[pst], w - pst) +
 			write(1, &b[o], le - (1 - pst) - 2));
-		
 		}
 	}
 	b[--o] = 'x';
 	b[--o] = '0';
-
 	if (ec)
 		b[--o] = ec;
 	return (write(1, &b[o], 1024 - o - 1));
