@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define bbm 1024
 #define UNUSED(x) (void)(x)
 
 #define em 1
