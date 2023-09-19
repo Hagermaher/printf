@@ -18,12 +18,12 @@ int wu(int in, int o, char b[], int e, int a, int d, int m)
 	int w;
 	char z;
 
-	h = BUFF_SIZE - o - 1;
+	h = 1024 - o - 1;
 	z = ' ';
 	w = 0;
 	UNUSED(m);
 	UNUSED(in);
-	if (d == 0 && o == BUFF_SIZE - 2 && b[o] == 48)
+	if (d == 0 && o == 1024 - 2 && b[o] == 48)
 		return (0);
 	if (d > 0 && d < h)
 		z = ' ';

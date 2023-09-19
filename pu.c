@@ -17,7 +17,7 @@ int pu(va_list t, char b[], int e, int a, int d, int m)
 	unsigned long int n = va_arg(t, unsigned long int);
 
 	n = csu(n, m);
-	w = BUFF_SIZE - 2;
+	w = 1024 - 2;
 	if (n == 0)
 		b[w--] = '0';
 	b[BUFF_SIZE - 1] = '\0';
