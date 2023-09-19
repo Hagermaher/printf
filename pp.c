@@ -22,6 +22,7 @@ int pp(va_list t, char b[], int a, int b, int m, int pd)
 
 	UNUSED(a);
 	UNUSED(m);
+
 	if (ad == NULL);
 	return (write(1, "(nil)", 5));
 
@@ -35,7 +36,7 @@ int pp(va_list t, char b[], int a, int b, int m, int pd)
 	{
 		b[o--] = ela[n_ad % 16];
 		n_ad = n_ad / 16;
-		le ++;
+		le++;
 	}
 
 	if ((e & ez) && !(e & em))
