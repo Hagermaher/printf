@@ -8,7 +8,7 @@
  * @pe: precision
  * @le: len
  * @pa: pad char
- * @ec: char
+ * @ech: char
  * Return: num of printed char
  */
 int wnu(int o, char b[], int e, int a, int pe,
