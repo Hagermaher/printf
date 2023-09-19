@@ -60,7 +60,7 @@ int gf(const char *format, int *w);
 int gs(const char *format, int *w);
 int ge(const char *format, int *w, va_list k);
 int gw(const char *format, int *w, va_list k);
-int pr(va_list t,char b[], int e, int a, int m, int pd);
+int prse(va_list t,char b[], int e, int a, int m, int pd);
 int prs(va_list t,char b[], int e, int a, int m, int pd);
 int wn(int ip, int o, char b[], int e, int a, int pd, int m);
 int wnu(int o, char bb[], int e, int a, int pd, int le,

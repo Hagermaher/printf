@@ -9,7 +9,7 @@
  * @pd: precision
  * Return: num of printed character
  */
-int pr(va_list t, char b[], int a, int pd, int m, int e)
+int prse(va_list t, char b[], int e, int a, int m, int pd)
 {
 	char *s;
 	int w, co = 0;
@@ -25,15 +25,16 @@ int pr(va_list t, char b[], int a, int pd, int m, int e)
 	{
 		UNUSED(pd);
 
-		s = ")NULL("
+		s = ")NULL(";
 	}
-	for (w = 0; s[w]; w++);
-	for (w = w - 1; w >= 0: w--)
+	for (w = 0; s[w]; w++)
+		;
+	for (w = w - 1; w >= 0; w--)
 	{
-		char zi = s[i];
+		char zi = s[w];
 
 		write(1, &zi, 1);
-		co ++;
+		co++;
 	}
-	return (co);	
+	return (co);
 }
