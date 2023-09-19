@@ -45,7 +45,7 @@ int wpn(char b[], int o, int le,int a,
 				b[--o] = ec;
 			b[1] = '0';
 			b[2] = 'x';
-			return (write(1, &b[pst], i - pst) +
+			return (write(1, &b[pst], w - pst) +
 			write(1, &b[o], le - (1 - pst) - 2));
 		
 		}
