@@ -8,13 +8,16 @@
 
 int gsi(const char *format, int *w)
 {
-	int cu = *w + 1;
-	int m = 0;
+	int cu;
+	int m;
+
+	cu = *w + 1;
+	m = 0;
 
 	if (format[cu] == 'l')
-		m = ml;
+		m = 2;
 	else if (format[cu] == 'h')
-		m = ms;
+		m = 1;
 
 	if (m == 0)
 		*w = cu - 1;

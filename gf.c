@@ -7,9 +7,11 @@
  */
 int gf(const char *format, int *w)
 {
-	int g, cu;
+	int g;
+	int cu;
+	int e;
 
-	int e = 0;
+	e = 0;
 
 	const char ec[] = {'-', '+', '0', '#', ' ', '\0'};
 	const char ear[] = {em, ep, ez, eh, es, 0};

@@ -12,14 +12,14 @@
 
 int poc(va_list t, char b[], int e, int a, int m, int pd)
 {
-	int w = 1024 - 2;
+	int w;
 	unsigned long int n = va_arg(t, unsigned long int);
-	unsigned long int in = n;
+	unsigned long int in;
 
+	w = 1024 - 2;
+	in = n;
 	UNUSED(a);
-
 	n = csu(n, m);
-
 	if (n == 0)
 		b[w--] = '0';
 	b[1024 - 1] = '\0';

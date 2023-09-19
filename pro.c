@@ -39,7 +39,7 @@ int pro(va_list t, char b[], int e, int a, int pd, int m)
 			{
 				q = c[g];
 				write(1, &q, 1);
-				o++;
+				o = o + 1;
 				break;
 			}
 		}
@@ -47,7 +47,7 @@ int pro(va_list t, char b[], int e, int a, int pd, int m)
 		{
 			q = s[w];
 			write(1, &q, 1);
-			o++;
+			o = o + 1;
 		}
 	}
 	return (o);

@@ -14,7 +14,12 @@
 int hp(const char *f, int *o, va_list k, char b[],
 		int e, int a, int pd, int m)
 {
-	int w, ul = 0, pch = -1;
+	int w;
+	int ul;
+	int pch;
+
+	ul = 0,
+	pch = -1;
 	xf f_t[] = {
 		{'c', pc}, {'s', ps}, {'%', pps},
 		{'i', pi}, {'d', pi}, {'b', pbi},
@@ -28,24 +33,24 @@ int hp(const char *f, int *o, va_list k, char b[],
 	if (f_t[w].f == '\0')
 	{
 		if (f[*o] == '\0')
-		return (-1);
-		ul += write(1, "%%", 1);
+			return (-1);
+		ul = ul + write(1, "%%", 1);
 		if (f[*o - 1] == ' ')
-			ul += write(1, " ", 1);
+			ul = ul + write(1, " ", 1);
 		else if (a)
 		{
 			--(*o);
-		while (f[*o] != ' ' && f[*o] != '%')
-		{
-			--(*o);
+			while (f[*o] != ' ' && f[*o] != '%')
+			{
+				--(*o);
+			}
+			if (f[*o] == ' ')
+			{
+				--(*o);
+			}
+			return (1);
 		}
-		if (f[*o] == ' ')
-		{
-			--(*o);
-		}
-		return (1);
-		}
-		ul += write(1, &f[*o], 1);
+		ul = ul + write(1, &f[*o], 1);
 		return (ul);
 	}
 	return (pch);

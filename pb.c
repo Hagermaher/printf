@@ -11,24 +11,25 @@
  */
 int pbi(va_list t, char b[], int e, int a, int m, int pd)
 {
-	unsigned int q, v, w, su;
-
+	unsigned int q;
+	unsigned int v;
+	unsigned int w;
+	unsigned int su;
 	unsigned int ar[32];
-
 	int co;
+	char zi;
 
 	UNUSED(b);
 	UNUSED(e);
 	UNUSED(a);
 	UNUSED(pd);
 	UNUSED(m);
-
 	q = va_arg(t, unsigned int);
 	v = 2147483648;
 	ar[0] = q / v;
 	for (w = 1; w < 32; w++)
 	{
-		v /= 2;
+		v = v / 2;
 		ar[w] = (q / v) % 2;
 	}
 	for (w = 0, su = 0, co = 0; w < 32; w++)
@@ -36,8 +37,7 @@ int pbi(va_list t, char b[], int e, int a, int m, int pd)
 		su = su + ar[w];
 		if (su || w == 31)
 		{
-			char zi = '0' + ar[w];
-
+			zi = '0' + ar[w];
 			write(1, &zi, 1);
 			co = co + 1;
 		}

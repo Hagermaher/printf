@@ -12,7 +12,11 @@
 int prse(va_list t, char b[], int e, int a, int m, int pd)
 {
 	char *s;
-	int w, co = 0;
+	int w;
+	int co;
+	char zi;
+
+	co = 0;
 
 	UNUSED(b);
 	UNUSED(a);
@@ -31,7 +35,7 @@ int prse(va_list t, char b[], int e, int a, int m, int pd)
 		;
 	for (w = w - 1; w >= 0; w--)
 	{
-		char zi = s[w];
+		zi = s[w];
 
 		write(1, &zi, 1);
 		co++;
