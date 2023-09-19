@@ -20,7 +20,7 @@ int pu(va_list t, char b[], int e, int a, int d, int m)
 	w = 1024 - 2;
 	if (n == 0)
 		b[w--] = '0';
-	b[BUFF_SIZE - 1] = '\0';
+	b[1024 - 1] = '\0';
 	while (n > 0)
 	{
 		b[w--] = (n % 10) + '0';

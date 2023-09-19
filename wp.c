@@ -12,14 +12,14 @@
  * Return: num of written
  */
 int wpn(char b[], int o, int le,int a,
-		int e, char pa, char ec, int pst);
+		int e, char pa, char ec, int pst)
 {
 	int w;
 
 	if (a > le)
 	{
 		for (w = 3; w < a - le + 3; w++)
-			b[w] pa;
+			b[w] =  pa;
 		b[w] = '\0';
 		if (e & em && pa == ' ')
 		{
@@ -28,7 +28,7 @@ int wpn(char b[], int o, int le,int a,
 
 			if (ec)
 				b[--o] = ec;
-			return (write(1, &buffer[o], le) + write(1, &b[3], i -3));
+			return (write(1, &b[o], le) + write(1, &b[3], w - 3));
 		}
 		else if (!(e & em) && pa == ' ')
 		{
@@ -46,7 +46,7 @@ int wpn(char b[], int o, int le,int a,
 			b[1] = '0';
 			b[2] = 'x';
 			return (write(1, &b[pst], i - pst) +
-			write(1, b[o], le - (1 - pst) - 2));
+			write(1, &b[o], le - (1 - pst) - 2));
 		
 		}
 	}
@@ -55,5 +55,5 @@ int wpn(char b[], int o, int le,int a,
 
 	if (ec)
 		b[--o] = ec;
-	return (write(1, &b[o], bbm - o - 1));
+	return (write(1, &b[o], 1024 - o - 1));
 }
