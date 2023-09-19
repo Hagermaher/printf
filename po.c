@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * po - print octal
+ * poc - print octal
  * @pd: precision
  * @t: list of argument
  * @b : buffer array
