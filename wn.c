@@ -7,12 +7,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int wn(int in, int o, char b[], int e, int a, int d, int m)
+int wn(int in, int o, char b[], int e, int a, int pd, int m)
 {
 	int h;
 	char z;
@@ -30,5 +30,5 @@ int wn(int in, int o, char b[], int e, int a, int d, int m)
 		x = 43;
 	else if (e & es)
 		x = 32;
-	return (wnu(o, b, e, a, d, h, z, x));
+	return (wnu(o, b, e, a, pd, h, z, x));
 }

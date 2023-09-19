@@ -7,12 +7,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int wu(int in, int o, char b[], int e, int a, int d, int m)
+int wu(int in, int o, char b[], int e, int a, int pd, int m)
 {
 	int h;
 	int w;
@@ -23,11 +23,11 @@ int wu(int in, int o, char b[], int e, int a, int d, int m)
 	w = 0;
 	UNUSED(m);
 	UNUSED(in);
-	if (d == 0 && o == 1024 - 2 && b[o] == 48)
+	if (pd == 0 && o == 1024 - 2 && b[o] == 48)
 		return (0);
-	if (d > 0 && d < h)
+	if (pd > 0 && pd < h)
 		z = ' ';
-	while (d > h)
+	while (pd > h)
 	{
 		b[--o] = 48;
 		h++;

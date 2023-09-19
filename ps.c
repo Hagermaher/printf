@@ -6,12 +6,12 @@
  * @b: Buffer array
  * @e: active flags
  * @a: dth.
- * @d: Precisiontion
+ * @pd: Precisiontion
  * @m: Siifier
  * Return: Numbeed
  */
 
-int ps(va_list t, char b[], int e, int a, int d, int m)
+int ps(va_list t, char b[], int e, int a, int pd, int m)
 {
 	int h;
 	int w;
@@ -22,18 +22,18 @@ int ps(va_list t, char b[], int e, int a, int d, int m)
 	UNUSED(b);
 	UNUSED(e);
 	UNUSED(a);
-	UNUSED(d);
+	UNUSED(pd);
 	UNUSED(m);
 	if (s == NULL)
 	{
 		s = "(null)";
-		if (d >= 6)
+		if (pd >= 6)
 			s = "      ";
 	}
 	while (s[h] != '\0')
 		h = h + 1;
-	if (d >= 0 && d < h)
-		h = d;
+	if (pd >= 0 && pd < h)
+		h = pd;
 	if (a > h)
 	{
 		if (e & em)

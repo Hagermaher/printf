@@ -6,12 +6,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int pro(va_list t, char b[], int e, int a, int d, int m)
+int pro(va_list t, char b[], int e, int a, int pd, int m)
 {
 	char q;
 	char *s;
@@ -26,7 +26,7 @@ int pro(va_list t, char b[], int e, int a, int d, int m)
 	UNUSED(b);
 	UNUSED(e);
 	UNUSED(a);
-	UNUSED(d);
+	UNUSED(pd);
 	UNUSED(m);
 
 	if (s == NULL)

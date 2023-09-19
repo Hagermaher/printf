@@ -5,11 +5,11 @@
  * @b: Buffprint
  * @e: Calculates act
  * @a: ge.
- * @d: Precisoon
+ * @pd: Precisoon
  * @m: Size sr
  * Return: Numprinted
  */
-int pi(va_list t, char b[], int e, int a, int d, int m)
+int pi(va_list t, char b[], int e, int a, int pd, int m)
 {
 	int w;
 	int in;
@@ -34,5 +34,5 @@ int pi(va_list t, char b[], int e, int a, int d, int m)
 		ra = ra / 10;
 	}
 	w++;
-	return (wn(in, w, b, e, a, d, m));
+	return (wn(in, w, b, e, a, pd, m));
 }

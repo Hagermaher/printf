@@ -6,12 +6,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int phd(va_list t, char b[], int e, int a, int d, int m)
+int phd(va_list t, char b[], int e, int a, int pd, int m)
 {
-	return (ph(t, "0123456789abcdef", b, e, 'x', a, d, m));
+	return (ph(t, "0123456789abcdef", b, e, 'x', a, pd, m));
 }

@@ -5,12 +5,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int pnp(va_list t, char b[], int e, int a, int d, int m)
+int pnp(va_list t, char b[], int e, int a, int pd, int m)
 {
 	int w;
 	int o;
@@ -20,7 +20,7 @@ int pnp(va_list t, char b[], int e, int a, int d, int m)
 	o = 0;
 	UNUSED(e);
 	UNUSED(a);
-	UNUSED(d);
+	UNUSED(pd);
 	UNUSED(m);
 	if (s == NULL)
 		return (write(1, "(null)", 6));

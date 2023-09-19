@@ -6,12 +6,12 @@
  * @b: characters
  * @e: f
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int pu(va_list t, char b[], int e, int a, int d, int m)
+int pu(va_list t, char b[], int e, int a, int pd, int m)
 {
 	int w;
 	unsigned long int n = va_arg(t, unsigned long int);
@@ -27,5 +27,5 @@ int pu(va_list t, char b[], int e, int a, int d, int m)
 		n = n / 10;
 	}
 	w++;
-	return (wu(0, w, b, e, a, d, m));
+	return (wu(0, w, b, e, a, pd, m));
 }

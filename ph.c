@@ -8,12 +8,12 @@
  * @e: f
  * @ech: fd
  * @a: d
- * @d: d
+ * @pd: d
  * @m: s
  * Return: charcaters
  */
 
-int ph(va_list t, char ela[], char b[], int e, char ech, int a, int d, int m)
+int ph(va_list t, char ela[], char b[], int e, char ech, int a, int pd, int m)
 {
 	int w;
 	unsigned long int n;
@@ -38,5 +38,5 @@ int ph(va_list t, char ela[], char b[], int e, char ech, int a, int d, int m)
 		b[w--] = 48;
 	}
 	w++;
-	return (wu(0, w, b, e, a, d, m));
+	return (wu(0, w, b, e, a, pd, m));
 }
