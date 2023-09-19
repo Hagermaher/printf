@@ -1,43 +1,35 @@
 #include "main.h"
-
 /**
- * po - prints
- * @n: arguements
- * @y: characters
- * Return: charcaters
+ * po - print octal
+ * @t: list of argument
+ * @b : buffer array
+ * @e: calc flags
+ * @a: width
+ * @m: sizw
+ * Return : num of char
  */
 
-int po(unsigned int n, int y)
+int po(va_list t, char b[], int e, int a, int m, int pd)
 {
-	int c[100];
-	int w;
-	int b;
+	int w = bs - 2;
+	unsigned long int n = va_arg(t, unsigned long int);
+	unsigned long int in = n;
 
-	w = 0;
+	UNUSED(a);
 
-	while (n != 0)
+	n = csu(n, m);
+
+	if (n == 0)
+		b[w--] = '0';
+	
+	b[bs - 1] = '\0';
+	while (n > 0)
 	{
-		int rr;
-
-		rr = n % 8;
-
-		c[w] = 48 + rr;
-		w = w + 1;
+		b[w--] = (n % 8) + '0';
 		n = n / 8;
 	}
-
-	if (w == 0)
-	{
-		_putchar('0');
-		y = y + 1;
-	}
-	else
-	{
-		for (b = w - 1; b >= 0; b--)
-		{
-			_putchar(c[b]);
-			y = y + 1;
-		}
-	}
-	return (y);
-}
+	if (e & eh && in != 0)
+		b[w--] = '0';
+	w++;
+	return (write_unsignd(0, w, b, e, a, pd, m));
+}	

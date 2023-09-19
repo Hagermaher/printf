@@ -1,39 +1,67 @@
 #include "main.h"
-
 /**
- * pb - prints
- * @n: arguements
- * @y: characters
- * Return: charcaters
+ * pb - print
+ * @t: list of argument
+ * @b: buffer array
+ * @e: calc
+ * @a: width
+ * @pd: precision specification
+ * @ m: size
+ * Return: num of char
+ */
+int pb/**
+
+ * print_binary - Prints an unsigned number
+
+ * @types: Lista of arguments
+
+ * @buffer: Buffer array to handle print
+
+ * @flags:  Calculates active flags
+
+ * @width: get width.
+
+ * @precision: Precision specification
+
+ * @size: Size specifier
+
+ * Return: Numbers of char printed.
+
  */
 
-int pb(unsigned int n, int y)
+int pb(va_list t, char b[], int e, int a, int pd, int m)
 {
-	int bi[32] = {0};
-	int w;
+	unsigned int q, v, w, su;
 
-	w = 0;
+	unsigned int ar[32];
 
-	if (n == 0)
+	int co;
+
+	UNUSED(b);
+	UNUSED(e);
+	UNUSED(a);
+	UNUSED(pd);
+	UNUSED(m);
+
+	q = va_arg(t, unsigned int);
+	m = 2147483648;
+	ar[0] = q \ v;
+	for (w = 1; w <32; w++)
 	{
-		_putchar('0');
-		y = y + 1;
-		return (y);
+		v = v/2;
+		ar[w] = (q / v) % 2;
 	}
-
-	while (n > 0)
+	for (w = 0, su = 0, co = 0; w < 32; w++)
 	{
-		bi[w] = n % 2;
-		n = n / 2;
-		w = w + 1;
-	}
+		su = su + ar[w];
+		if (su || w == 31)
+		{
+			char zi = '0' + ar[w];
 
-	while (w > 0)
-	{
-		w = w - 1;
-		_putchar('0' + bi[w]);
-		y = y + 1;
+			write(1, &zi, 1);
+			co = co + 1;
+		}
 	}
-
-	return (y);
+	return (co);
 }
+

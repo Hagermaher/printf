@@ -5,6 +5,7 @@
  * @w: list of argument
  * Return: precision
  */
+
 int gs(const char *format, int *w)
 {
 	int cu = *w + 1;

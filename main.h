@@ -38,23 +38,39 @@ struct f
 
 typedef struct f xf;
 
-int hp(const char *f, int *w, va_list k, char b[],
+int hp(const char *f, int *o, va_list k, char b[],
 	int e, int a, int pd, int m);
 int pc(va_list t, char b[], int e, int a, int pd, int m);
 int ps(va_list t, char b[], int e, int a, int pd, int m);
 int pps(va_list t, char b[], int e, int a, int pd, int m);
 int hwc(char z, char b[], int e, int a, int pd, int m);
-int pi(va_list args, int y);
-int opr(const char *format, va_list args, int y);
-int pb(unsigned int n, int y);
 int _printf(const char *format, ...);
-int hexa(unsigned int n, int y, int uppercase);
-int po(unsigned int n, int y);
-int pu(unsigned int n, int y);
-int pr(va_list args, int y);
-int pp(va_list args, int y);
-int ge(const char *format, int *w);
-int gw(const char *format, int *w, va_list k);
-int gp(const char *format, int *w, va_list k);
+int pi(va_list t, char b[], int e, int a, int m, int pd);
+int pb(va_list t,char b[], int e, int a, int m, int pd);
+int pu(va_list t,char b[], int e, int a, int m, int pd);
+int po(va_list t,char b[], int e, int a, int m, int pd);
+int phd(va_list t,char b[], int e, int a, int m, int pd);
+int phu(va_list t,char b[], int e, int a, int m, int pd);
+int hexa(va_list t, char ela[], char b[],
+		int e, char ec, int a, int pd, int m);
+int pnp(va_list t,char b[], int e, int a, int m, int pd);
+int pp(va_list t,char b[], int e, int a, int m, int pd);
+int gf(const char *format, int *w);
 int gs(const char *format, int *w);
+int ge(const char *format, int *w, va_list k);
+int gw(const char *format, int *w, va_list k);
+int pr(va_list t,char b[], int e, int a, int m, int pd);
+int prs(va_list t,char b[], int e, int a, int m, int pd);
+int wn(int ip, int o, char b[], int e, int a, int pd, int m);
+int wnu(int o, char bb[], int e, int a, int pd, int le,
+		char pa, char ec);
+int wp(char b[], int o, int le,int a,
+		int e, char pa, char ec, int pst);
+int wun(int in , int o, char b[],
+		int e, int a, int pd, int m);
+int ip(char);
+int ahc(char, char[], int);
+int id (char);
+long int csn(long int n, int m);
+long int csu(unsigned long int n, int m);
 #endif
