@@ -10,7 +10,7 @@ void fpf(char b[], int *bm);
 int _printf(const char *format, ...)
 {
 
-	int w, y, yt, e, a, d, m, bm;
+	int w, y, yt, e, a, pd, m, bm;
 	char b[1024];
 	va_list k;
 
@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 			fpf(b, &bm);
 			e = gf(format, &w);
 			a = gw(format, &w, k);
-			d = gp(format, &w, k);
+			pd = gp(format, &w, k);
 			m = gsi(format, &w);
 			++w;
-			y = hp(format, &w, k, b, e, a, d, m);
+			y = hp(format, &w, k, b, e, a, pd, m);
 			if (y == -1)
 				return (-1);
 			yt = yt + y;
