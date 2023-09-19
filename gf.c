@@ -5,7 +5,7 @@
  * @w: param
  * Return: flags
  */
-int gf(const char *format, int *w) 
+int gf(const char *format, int *w)
 {
 	int g, cu;
 
