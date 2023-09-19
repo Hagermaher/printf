@@ -58,7 +58,7 @@ int pnp(va_list t, char b[], int e, int a, int m, int pd);
 int ppo(va_list t, char b[], int e, int a, int m, int pd);
 int gf(const char *format, int *w);
 int gsi(const char *format, int *w);
-int ge(const char *format, int *w, va_list k);
+int gp(const char *format, int *w, va_list k);
 int gw(const char *format, int *w, va_list k);
 int prse(va_list t,char b[], int e, int a, int m, int pd);
 int prs(va_list t,char b[], int e, int a, int m, int pd);
