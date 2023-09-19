@@ -53,7 +53,7 @@ int poc(va_list t, char b[], int e, int a, int m, int pd);
 int phd(va_list t, char b[], int e, int a, int m, int pd);
 int phu(va_list t, char b[], int e, int a, int m, int pd);
 int ph(va_list t, char ela[], char b[],
-		int e, char ec, int a, int pd, int m);
+		int e, char ec, int a, int pd, int m) ;
 int pnp(va_list t, char b[], int e, int a, int m, int pd);
 int ppo(va_list t, char b[], int e, int a, int m, int pd);
 int gf(const char *format, int *w);
@@ -74,4 +74,5 @@ int aph(char, char[], int);
 int id(char);
 long int csn(long int n, int m);
 long int csu(unsigned long int n, int m);
+void fpf(char b[], int *bm);
 #endif
