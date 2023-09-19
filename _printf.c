@@ -1,5 +1,7 @@
 #include "main.h"
 
+void fpf(char b[], int *bm);
+
 /**
  * _printf - print number
  * @format: arguements
@@ -24,12 +26,12 @@ int _printf(const char *format, ...)
 		{
 			b[bm++] = format[w];
 			if (bm == 1024)
-				pf(b, &bm);
+				fpf(b, &bm);
 			yt = yt + 1;
 		}
 		else
 		{
-			pf(b, &bm);
+			fpf(b, &bm);
 			e = gf(format, &w);
 			a = gw(format, &w, k);
 			d = gp(format, &w, k);
@@ -41,7 +43,20 @@ int _printf(const char *format, ...)
 			yt = yt + y;
 		}
 	}
-	pf(b, &bm);
+	fpf(b, &bm);
 	va_end(k);
 	return (yt);
+}
+
+/**
+ * fpf - Prints
+ * @b: Array
+ * @bm: Index
+ */
+
+void fpf(char b[], int *bm)
+{
+	if (*bm > 0)
+		write(1, &b[0], *bm);
+	*bm = 0;
 }
