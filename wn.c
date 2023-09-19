@@ -14,11 +14,11 @@
 
 int wn(int in, int o, char b[], int e, int a, int pd, int m)
 {
-	int h;
+	int le;
 	char z;
 	char x;
 
-	h = 1024 - o - 1;
+	le = 1024 - o - 1;
 	z = ' ';
 	x = 0;
 	UNUSED(m);
@@ -30,5 +30,5 @@ int wn(int in, int o, char b[], int e, int a, int pd, int m)
 		x = 43;
 	else if (e & es)
 		x = 32;
-	return (wnu(o, b, e, a, pd, h, z, x));
+	return (wnu(o, b, e, a, pd, le, z, x));
 }

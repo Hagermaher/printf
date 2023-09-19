@@ -5,25 +5,28 @@
  * @b: buffer array
  * @e: flags
  * @a: width
- * @pe: precision
+ * @pd: precision
  * @le: len
  * @pa: pad char
  * @ech: char
  * Return: num of printed char
  */
-int wnu(int o, char b[], int e, int a, int pe,
+int wnu(int o, char b[], int e, int a, int pd,
 		int le, char pa, char ech)
 {
 	int w, pst = 1;
 
-	if (pe == 0 && o == 1024 - 2 && b[o] == '0' && a == 0)
+	if (pd == 0 && o == 1024 - 2 && b[o] == '0' && a == 0)
 		return (0);
-	if (pe == 0 && o == 1024 - 2 && b[o] == '0')
+	if (pd == 0 && o == 1024 - 2 && b[o] == '0')
 		b[o] = pa = ' ';
-	if (pe > 0 && pe < le)
+	if (pd > 0 && pd < le)
 		pa = ' ';
-	while (pe > le)
-		b[--o] = '0', le++;
+	while (pd > le)
+	{
+		b[--o] = '0';
+		le++;
+	}
 	if (ech != 0)
 		le++;
 	if (a > le)
@@ -35,7 +38,7 @@ int wnu(int o, char b[], int e, int a, int pe,
 		{
 			if (ech)
 				b[--o] = ech;
-			return (write(1, &b[o], le) + write(1, &b[o], w - 1));
+			return (write(1, &b[o], le) + write(1, &b[1], w - 1));
 		}
 		else if (!(e & 1) && pa == ' ')
 		{
@@ -51,7 +54,7 @@ int wnu(int o, char b[], int e, int a, int pe,
 					write(1, &b[o], le - (1 - pst)));
 		}
 	}
-		if (ech)
-			b[--o] = ech;
-		return (write(1, &b[o], le));
+	if (ech)
+		b[--o] = ech;
+	return (write(1, &b[o], le));
 }

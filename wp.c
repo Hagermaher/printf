@@ -40,7 +40,7 @@ int wpn(char b[], int o, int le, int a,
 		else if (!(e & em) && pa == '0')
 		{
 			if (ec)
-				b[--o] = ec;
+				b[--pst] = ec;
 			b[1] = '0';
 			b[2] = 'x';
 			return (write(1, &b[pst], w - pst) +

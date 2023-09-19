@@ -22,15 +22,16 @@ int hwc(char z, char b[], int e, int a, int pd, int m)
 	b[w++] = z;
 	b[w] = '\0';
 
-	if (m > 1)
+	if (a > 1)
 	{
 		b[1024 - 1] = '\0';
 
-		for (w = 0; w < m - 1; w++)
+		for (w = 0; w < a - 1; w++)
 			b[1024 - w - 2] = pa;
 		if (e & em)
-			return (write(1, &b[0], 1) +
-					write(1, &b[1024 - w - 1], a - 1));
+			return (write(1, &b[0], 1) + write(1, &b[1024 - w - 1], a - 1));
+		else
+			return (write(1, &b[1024 - w - 1], a - 1) + write(1, &b[0], 1));
 	}
 	return (write(1, &b[0], 1));
 }

@@ -7,9 +7,9 @@
  */
 long int csn(long int n, int m)
 {
-	if (m == ml)
+	if (m == 2)
 		return (n);
-	else if (m == ms)
+	else if (m == 1)
 		return ((short)n);
 
 	return ((int)n);
