@@ -64,7 +64,7 @@ int prse(va_list t,char b[], int e, int a, int m, int pd);
 int prs(va_list t,char b[], int e, int a, int m, int pd);
 int wn(int ip, int o, char b[], int e, int a, int pd, int m);
 int wnu(int o, char bb[], int e, int a, int pd, int le,
-		char pa, char ec);
+		char pa, char ech);
 int wpn(char b[], int o, int le,int a,
 		int e, char pa, char ec, int pst);
 int wu(int in , int o, char b[],
