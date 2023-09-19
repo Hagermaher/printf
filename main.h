@@ -70,7 +70,7 @@ int wpn(char b[], int o, int le,int a,
 int wu(int in , int o, char b[],
 		int e, int a, int pd, int m);
 int ip(char);
-int ahc(char, char[], int);
+int aph(char, char[], int);
 int id (char);
 long int csn(long int n, int m);
 long int csu(unsigned long int n, int m);
