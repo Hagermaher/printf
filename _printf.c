@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			e = gf(format, &w);
 			a = gw(format, &w, k);
 			d = gp(format, &w, k);
-			m = gs(format, &w);
+			m = gsi(format, &w);
 			++w;
 			y = hp(format, &w, k, b, e, a, d, m);
 			if (y == -1)
