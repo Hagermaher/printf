@@ -36,10 +36,14 @@ int hp(const char *f, int *o, va_list k, char b[],
 		{
 			--(*o);
 		while (f[*o] != ' ' && f[*o] != '%')
+		{
 			--(*o);
-			if (f[*o] == ' ')
-				--(*o);
-			return (1);
+		}
+		if (f[*o] == ' ')
+		{
+			--(*o);
+		}
+		return (1);
 		}
 		ul += write(1, &f[*o], 1);
 		return (ul);
