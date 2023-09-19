@@ -25,7 +25,7 @@ int ph(va_list t, char ela[], char b[], int e, char ech, int a, int d, int m)
 	n = csu(n, m);
 	if (n == 0)
 		b[w--] = '0';
-	b[BUFF_SIZE - 1] = '\0';
+	b[1024 - 1] = '\0';
 	while (n > 0)
 	{
 		b[w--] = ela[n % 16];

@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 
 	int w, y, yt, e, a, d, m, bm;
-	char b[BUFF_SIZE];
+	char b[1024];
 	va_list k;
 
 	y = 0;
@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		if (format[w] != '%')
 		{
 			b[bm++] = format[w];
-			if (bm == BUFF_SIZE)
+			if (bm == 1024)
 				pf(b, &bm);
 			yt = yt + 1;
 		}

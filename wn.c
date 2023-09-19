@@ -18,7 +18,7 @@ int wn(int in, int o, char b[], int e, int a, int d, int m)
 	char z;
 	char x;
 
-	h = BUFF_SIZE - o - 1;
+	h = 1024 - o - 1;
 	z = ' ';
 	x = 0;
 	UNUSED(m);
