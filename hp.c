@@ -20,7 +20,7 @@ int hp(const char *f, int *o, va_list k, char b[],
 		{'i', pi}, {'d', pi}, {'b', pbi},
 		{'u', pu}, {'o', poc}, {'x', phd},
 		{'X', phu}, {'p', ppo}, {'S', pnp},
-		{'r', prse}, {'R', prs}, {'\0', NULL}
+		{'r', prse}, {'R', pro}, {'\0', NULL}
 	};
 	for (w = 0; f_t[w].f != '\0'; w++)
 		if (f[*o] == f_t[w].f)
