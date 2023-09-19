@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * gs - calc size
+ * gsi - calc size
  * @format: formated string
  * @w: list of argument
  * Return: precision
  */
 
-int gs(const char *format, int *w)
+int gsi(const char *format, int *w)
 {
 	int cu = *w + 1;
 	int m = 0;
