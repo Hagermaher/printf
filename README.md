@@ -1,6 +1,6 @@
 . C - printf team project
 
 
-Group Project:                                                                      
+Group Project:
 
-     n interesting textile, print 
+     n interesting textile, print
