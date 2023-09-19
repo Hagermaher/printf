@@ -22,7 +22,7 @@ int gf(const char *format, int *w)
 				e |= ear[g];
 				break;
 			}
-		if (ec == 0)
+		if (ec[g] == 0)
 			break;
 	}
 	*w = cu - 1;
