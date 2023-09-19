@@ -23,8 +23,8 @@ int wpn(char b[], int o, int le, int a,
 		b[w] = '\0';
 		if (e & em && pa == ' ')
 		{
-			b[--o];
-			b[--o];
+			b[--o] = 'x';
+			b[--o] = '0';
 			if (ec)
 				b[--o] = ec;
 			return (write(1, &b[o], le) + write(1, &b[3], w - 3));
