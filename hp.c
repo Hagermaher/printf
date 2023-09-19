@@ -17,9 +17,6 @@ int hp(const char *f, int *o, va_list k, char b[],
 	int w;
 	int ul;
 	int pch;
-
-	ul = 0,
-	pch = -1;
 	xf f_t[] = {
 		{'c', pc}, {'s', ps}, {'%', pps},
 		{'i', pi}, {'d', pi}, {'b', pbi},
@@ -27,6 +24,9 @@ int hp(const char *f, int *o, va_list k, char b[],
 		{'X', phu}, {'p', ppo}, {'S', pnp},
 		{'r', prse}, {'R', pro}, {'\0', NULL}
 	};
+
+	pch = -1;
+	ul = 0;
 	for (w = 0; f_t[w].f != '\0'; w++)
 		if (f[*o] == f_t[w].f)
 			return (f_t[w].fx(k, b, e, a, pd, m));

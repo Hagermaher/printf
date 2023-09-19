@@ -1,4 +1,4 @@
-#includei "main.h"
+#include "main.h"
 /**
  * ppo - print value of pointer
  * @t: lists of arguements
@@ -51,5 +51,5 @@ int ppo(va_list t, char b[], int e, int a, int m, int pd)
 		ec = ' ';
 		le++;
 	}
-	return (wpn(b, o, le, a, e, pa, ec, pst))
+	return (wpn(b, o, le, a, e, pa, ec, pst));
 }

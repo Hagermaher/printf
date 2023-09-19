@@ -7,15 +7,13 @@
  */
 int gf(const char *format, int *w)
 {
-	int g;
-	int cu;
+	const char ec[] = {'-', '+', '0', '#', ' ', '\0'};
+	const int ear[] = {em, ep, ez, eh, es, 0};
 	int e;
+	int cu;
+	int g;
 
 	e = 0;
-
-	const char ec[] = {'-', '+', '0', '#', ' ', '\0'};
-	const char ear[] = {em, ep, ez, eh, es, 0};
-
 	for (cu = *w + 1; format[cu] != '\0'; cu++)
 	{
 		for (g = 0; ec[g] != '\0'; g++)
