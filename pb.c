@@ -24,11 +24,11 @@ int pbi(va_list t, char b[], int e, int a, int m, int pd)
 	UNUSED(m);
 
 	q = va_arg(t, unsigned int);
-	m = 2147483648;
+	v = 2147483648;
 	ar[0] = q / v;
 	for (w = 1; w < 32; w++)
 	{
-		v = v / 2;
+		v /= 2;
 		ar[w] = (q / v) % 2;
 	}
 	for (w = 0, su = 0, co = 0; w < 32; w++)
