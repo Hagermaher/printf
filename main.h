@@ -60,18 +60,18 @@ int gf(const char *format, int *w);
 int gsi(const char *format, int *w);
 int gp(const char *format, int *w, va_list k);
 int gw(const char *format, int *w, va_list k);
-int prse(va_list t,char b[], int e, int a, int m, int pd);
-int prs(va_list t,char b[], int e, int a, int m, int pd);
+int prse(va_list t, char b[], int e, int a, int m, int pd);
+int pro(va_list t, char b[], int e, int a, int d, int m);
 int wn(int ip, int o, char b[], int e, int a, int pd, int m);
 int wnu(int o, char bb[], int e, int a, int pd, int le,
 		char pa, char ech);
-int wpn(char b[], int o, int le,int a,
+int wpn(char b[], int o, int le, int a,
 		int e, char pa, char ec, int pst);
-int wu(int in , int o, char b[],
+int wu(int in, int o, char b[],
 		int e, int a, int pd, int m);
 int ip(char);
-int ahc(char, char[], int);
-int id (char);
+int aph(char, char[], int);
+int id(char);
 long int csn(long int n, int m);
 long int csu(unsigned long int n, int m);
 #endif
