@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * ps - Prints
+ * ps - Prints a string
  * @t: Li arguments
  * @b: Buffer array
  * @e: active flags

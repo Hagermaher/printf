@@ -6,7 +6,7 @@
  * @b : buffer array
  * @e: calc flags
  * @a: width
- * @m: sizw
+ * @m: size
  * Return: num of char
  */
 

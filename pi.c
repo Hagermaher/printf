@@ -4,7 +4,7 @@
  * @t: ents
  * @b: Buffprint
  * @e: Calculates act
- * @a: ge.
+ * @a: get width
  * @pd: Precisoon
  * @m: Size sr
  * Return: Numprinted

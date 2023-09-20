@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pc - print
+ * pc - printchar
  * @t: list of argu
  * @b: buffer array to argument
  * @e: calc active flag

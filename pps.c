@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pps - prints a precent
+ * pps - prints a prrecision
  * @t: list of argument
  * @b: buffer array
  * @e: calc active flags
