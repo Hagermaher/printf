@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pro - print
+ * pro - print string rot
  * @t: arguements
  * @b: characters
  * @e: f

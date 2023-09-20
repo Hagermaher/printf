@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * hp - print argumrnt
+ * hp - handle print argumrnt
  * @f: format string
  * @k: list of argument to be print
  * @o: o

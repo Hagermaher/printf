@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * wn - print
+ * wn - print number
  * @in: arguements
  * @o: d
  * @b: characters
