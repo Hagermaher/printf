@@ -23,10 +23,7 @@ int wnu(int o, char b[], int e, int a, int pd,
 	if (pd > 0 && pd < le)
 		pa = ' ';
 	while (pd > le)
-	{
-		b[--o] = '0';
-		le++;
-	}
+		b[--o] = '0', le++;
 	if (ech != 0)
 		le++;
 	if (a > le)
@@ -50,8 +47,7 @@ int wnu(int o, char b[], int e, int a, int pd,
 		{
 			if (ech)
 				b[--pst] = ech;
-			return (write(1, &b[pst], w - pst) +
-					write(1, &b[o], le - (1 - pst)));
+			return (write(1, &b[pst], w - pst) + write(1, &b[o], le - (1 - pst)));
 		}
 	}
 	if (ech)
